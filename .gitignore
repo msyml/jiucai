@@ -1,0 +1,19 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# next.js build output
+/.next
+/out
+
+# environment variables（含管理员口令，切勿提交）
+.env*.local
+.env
+
+# debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 注意：data/ 目录（用户编辑的股票数据）不忽略，方便版本管理与备份。

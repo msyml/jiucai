@@ -1,0 +1,1264 @@
+{
+  "sectors": [
+    {
+      "code": "pt01801010",
+      "name": "农林牧渔",
+      "sectorCode": "sw1_pt01801010"
+    },
+    {
+      "code": "pt01801030",
+      "name": "基础化工",
+      "sectorCode": "sw1_pt01801030"
+    },
+    {
+      "code": "pt01801040",
+      "name": "钢铁",
+      "sectorCode": "sw1_pt01801040"
+    },
+    {
+      "code": "pt01801050",
+      "name": "有色金属",
+      "sectorCode": "sw1_pt01801050"
+    },
+    {
+      "code": "pt01801080",
+      "name": "电子",
+      "sectorCode": "sw1_pt01801080"
+    },
+    {
+      "code": "pt01801110",
+      "name": "家用电器",
+      "sectorCode": "sw1_pt01801110"
+    },
+    {
+      "code": "pt01801120",
+      "name": "食品饮料",
+      "sectorCode": "sw1_pt01801120"
+    },
+    {
+      "code": "pt01801130",
+      "name": "纺织服饰",
+      "sectorCode": "sw1_pt01801130"
+    },
+    {
+      "code": "pt01801140",
+      "name": "轻工制造",
+      "sectorCode": "sw1_pt01801140"
+    },
+    {
+      "code": "pt01801150",
+      "name": "医药生物",
+      "sectorCode": "sw1_pt01801150"
+    },
+    {
+      "code": "pt01801160",
+      "name": "公用事业",
+      "sectorCode": "sw1_pt01801160"
+    },
+    {
+      "code": "pt01801170",
+      "name": "交通运输",
+      "sectorCode": "sw1_pt01801170"
+    },
+    {
+      "code": "pt01801180",
+      "name": "房地产",
+      "sectorCode": "sw1_pt01801180"
+    },
+    {
+      "code": "pt01801200",
+      "name": "商贸零售",
+      "sectorCode": "sw1_pt01801200"
+    },
+    {
+      "code": "pt01801210",
+      "name": "社会服务",
+      "sectorCode": "sw1_pt01801210"
+    },
+    {
+      "code": "pt01801230",
+      "name": "综合",
+      "sectorCode": "sw1_pt01801230"
+    },
+    {
+      "code": "pt01801710",
+      "name": "建筑材料",
+      "sectorCode": "sw1_pt01801710"
+    },
+    {
+      "code": "pt01801720",
+      "name": "建筑装饰",
+      "sectorCode": "sw1_pt01801720"
+    },
+    {
+      "code": "pt01801730",
+      "name": "电力设备",
+      "sectorCode": "sw1_pt01801730"
+    },
+    {
+      "code": "pt01801740",
+      "name": "国防军工",
+      "sectorCode": "sw1_pt01801740"
+    },
+    {
+      "code": "pt01801750",
+      "name": "计算机",
+      "sectorCode": "sw1_pt01801750"
+    },
+    {
+      "code": "pt01801760",
+      "name": "传媒",
+      "sectorCode": "sw1_pt01801760"
+    },
+    {
+      "code": "pt01801770",
+      "name": "通信",
+      "sectorCode": "sw1_pt01801770"
+    },
+    {
+      "code": "pt01801780",
+      "name": "银行",
+      "sectorCode": "sw1_pt01801780"
+    },
+    {
+      "code": "pt01801790",
+      "name": "非银金融",
+      "sectorCode": "sw1_pt01801790"
+    },
+    {
+      "code": "pt01801880",
+      "name": "汽车",
+      "sectorCode": "sw1_pt01801880"
+    },
+    {
+      "code": "pt01801890",
+      "name": "机械设备",
+      "sectorCode": "sw1_pt01801890"
+    },
+    {
+      "code": "pt01801950",
+      "name": "煤炭",
+      "sectorCode": "sw1_pt01801950"
+    },
+    {
+      "code": "pt01801960",
+      "name": "石油石化",
+      "sectorCode": "sw1_pt01801960"
+    },
+    {
+      "code": "pt01801970",
+      "name": "环保",
+      "sectorCode": "sw1_pt01801970"
+    },
+    {
+      "code": "pt01801980",
+      "name": "美容护理",
+      "sectorCode": "sw1_pt01801980"
+    }
+  ],
+  "stocks": [
+    {
+      "code": "sh600519",
+      "name": "贵州茅台",
+      "sector": "食品饮料",
+      "market": "sh-main",
+      "note": "白酒龙头，A股股王"
+    },
+    {
+      "code": "sz000858",
+      "name": "五粮液",
+      "sector": "食品饮料",
+      "market": "sz-main",
+      "note": "浓香型白酒龙头"
+    },
+    {
+      "code": "sz000568",
+      "name": "泸州老窖",
+      "sector": "食品饮料",
+      "market": "sz-main",
+      "note": ""
+    },
+    {
+      "code": "sh600809",
+      "name": "山西汾酒",
+      "sector": "食品饮料",
+      "market": "sh-main",
+      "note": ""
+    },
+    {
+      "code": "sh603288",
+      "name": "海天味业",
+      "sector": "食品饮料",
+      "market": "sh-main",
+      "note": "调味品龙头"
+    },
+    {
+      "code": "sh600887",
+      "name": "伊利股份",
+      "sector": "食品饮料",
+      "market": "sh-main",
+      "note": "乳业龙头"
+    },
+    {
+      "code": "sz000596",
+      "name": "古井贡酒",
+      "sector": "食品饮料",
+      "market": "sz-main",
+      "note": ""
+    },
+    {
+      "code": "sh600132",
+      "name": "重庆啤酒",
+      "sector": "食品饮料",
+      "market": "sh-main",
+      "note": ""
+    },
+    {
+      "code": "sz002475",
+      "name": "立讯精密",
+      "sector": "电子",
+      "market": "sz-main",
+      "note": "消费电子精密制造龙头"
+    },
+    {
+      "code": "sz000725",
+      "name": "京东方A",
+      "sector": "电子",
+      "market": "sz-main",
+      "note": "面板龙头"
+    },
+    {
+      "code": "sh601138",
+      "name": "工业富联",
+      "sector": "电子",
+      "market": "sh-main",
+      "note": "代工龙头"
+    },
+    {
+      "code": "sh603501",
+      "name": "豪威集团",
+      "sector": "电子",
+      "market": "sh-main",
+      "note": "半导体CIS"
+    },
+    {
+      "code": "sh688981",
+      "name": "中芯国际",
+      "sector": "电子",
+      "market": "star",
+      "note": "晶圆代工龙头"
+    },
+    {
+      "code": "sz002371",
+      "name": "北方华创",
+      "sector": "电子",
+      "market": "sz-main",
+      "note": "半导体设备龙头"
+    },
+    {
+      "code": "sh688012",
+      "name": "中微公司",
+      "sector": "电子",
+      "market": "star",
+      "note": "刻蚀设备"
+    },
+    {
+      "code": "sz300782",
+      "name": "卓胜微",
+      "sector": "电子",
+      "market": "gem",
+      "note": "射频芯片"
+    },
+    {
+      "code": "sh688041",
+      "name": "海光信息",
+      "sector": "电子",
+      "market": "star",
+      "note": "国产CPU"
+    },
+    {
+      "code": "sh688256",
+      "name": "寒武纪",
+      "sector": "电子",
+      "market": "star",
+      "note": "AI芯片"
+    },
+    {
+      "code": "sz002049",
+      "name": "紫光国微",
+      "sector": "电子",
+      "market": "sz-main",
+      "note": ""
+    },
+    {
+      "code": "sz300433",
+      "name": "蓝思科技",
+      "sector": "电子",
+      "market": "gem",
+      "note": "玻璃面板"
+    },
+    {
+      "code": "sz002241",
+      "name": "歌尔股份",
+      "sector": "电子",
+      "market": "sz-main",
+      "note": ""
+    },
+    {
+      "code": "sh688775",
+      "name": "影石创新",
+      "sector": "电子",
+      "market": "star",
+      "note": "全景相机"
+    },
+    {
+      "code": "sh603160",
+      "name": "汇顶科技",
+      "sector": "电子",
+      "market": "sh-main",
+      "note": ""
+    },
+    {
+      "code": "sz002384",
+      "name": "东山精密",
+      "sector": "电子",
+      "market": "sz-main",
+      "note": ""
+    },
+    {
+      "code": "sz300750",
+      "name": "宁德时代",
+      "sector": "电子",
+      "market": "gem",
+      "note": "动力电池龙头"
+    },
+    {
+      "code": "sh600276",
+      "name": "恒瑞医药",
+      "sector": "医药生物",
+      "market": "sh-main",
+      "note": "创新药龙头"
+    },
+    {
+      "code": "sh603259",
+      "name": "药明康德",
+      "sector": "医药生物",
+      "market": "sh-main",
+      "note": "CRO龙头"
+    },
+    {
+      "code": "sz300760",
+      "name": "迈瑞医疗",
+      "sector": "医药生物",
+      "market": "gem",
+      "note": "医疗器械龙头"
+    },
+    {
+      "code": "sz002173",
+      "name": "创新医疗",
+      "sector": "医药生物",
+      "market": "sz-main",
+      "note": "医疗服务"
+    },
+    {
+      "code": "sh600062",
+      "name": "华润双鹤",
+      "sector": "医药生物",
+      "market": "sh-main",
+      "note": "化学制药"
+    },
+    {
+      "code": "sz000538",
+      "name": "云南白药",
+      "sector": "医药生物",
+      "market": "sz-main",
+      "note": "中药"
+    },
+    {
+      "code": "sh600436",
+      "name": "片仔癀",
+      "sector": "医药生物",
+      "market": "sh-main",
+      "note": "中药"
+    },
+    {
+      "code": "sz300015",
+      "name": "爱尔眼科",
+      "sector": "医药生物",
+      "market": "gem",
+      "note": "眼科连锁"
+    },
+    {
+      "code": "sh688235",
+      "name": "百济神州",
+      "sector": "医药生物",
+      "market": "star",
+      "note": "创新药"
+    },
+    {
+      "code": "sz002007",
+      "name": "华兰生物",
+      "sector": "医药生物",
+      "market": "sz-main",
+      "note": ""
+    },
+    {
+      "code": "sh601398",
+      "name": "工商银行",
+      "sector": "银行",
+      "market": "sh-main",
+      "note": "宇宙行"
+    },
+    {
+      "code": "sh601939",
+      "name": "建设银行",
+      "sector": "银行",
+      "market": "sh-main",
+      "note": ""
+    },
+    {
+      "code": "sh601288",
+      "name": "农业银行",
+      "sector": "银行",
+      "market": "sh-main",
+      "note": ""
+    },
+    {
+      "code": "sh601988",
+      "name": "中国银行",
+      "sector": "银行",
+      "market": "sh-main",
+      "note": ""
+    },
+    {
+      "code": "sh600036",
+      "name": "招商银行",
+      "sector": "银行",
+      "market": "sh-main",
+      "note": "零售银行龙头"
+    },
+    {
+      "code": "sz000001",
+      "name": "平安银行",
+      "sector": "银行",
+      "market": "sz-main",
+      "note": ""
+    },
+    {
+      "code": "sh601166",
+      "name": "兴业银行",
+      "sector": "银行",
+      "market": "sh-main",
+      "note": ""
+    },
+    {
+      "code": "sh600000",
+      "name": "浦发银行",
+      "sector": "银行",
+      "market": "sh-main",
+      "note": ""
+    },
+    {
+      "code": "sh601211",
+      "name": "国泰海通",
+      "sector": "非银金融",
+      "market": "sh-main",
+      "note": "券商合并龙头"
+    },
+    {
+      "code": "sh600030",
+      "name": "中信证券",
+      "sector": "非银金融",
+      "market": "sh-main",
+      "note": "券商龙头"
+    },
+    {
+      "code": "sz300059",
+      "name": "东方财富",
+      "sector": "非银金融",
+      "market": "gem",
+      "note": "互联网券商"
+    },
+    {
+      "code": "sh601318",
+      "name": "中国平安",
+      "sector": "非银金融",
+      "market": "sh-main",
+      "note": "保险龙头"
+    },
+    {
+      "code": "sh601628",
+      "name": "中国人寿",
+      "sector": "非银金融",
+      "market": "sh-main",
+      "note": ""
+    },
+    {
+      "code": "sh600837",
+      "name": "海通证券",
+      "sector": "非银金融",
+      "market": "sh-main",
+      "note": ""
+    },
+    {
+      "code": "sz002230",
+      "name": "科大讯飞",
+      "sector": "计算机",
+      "market": "sz-main",
+      "note": "AI语音龙头"
+    },
+    {
+      "code": "sh688561",
+      "name": "奇安信",
+      "sector": "计算机",
+      "market": "star",
+      "note": "网络安全"
+    },
+    {
+      "code": "sh688036",
+      "name": "传音控股",
+      "sector": "计算机",
+      "market": "star",
+      "note": "非洲手机之王"
+    },
+    {
+      "code": "sz000977",
+      "name": "浪潮信息",
+      "sector": "计算机",
+      "market": "sz-main",
+      "note": "服务器龙头"
+    },
+    {
+      "code": "sh688047",
+      "name": "龙芯中科",
+      "sector": "计算机",
+      "market": "star",
+      "note": "国产CPU"
+    },
+    {
+      "code": "sh688082",
+      "name": "盛美上海",
+      "sector": "计算机",
+      "market": "star",
+      "note": ""
+    },
+    {
+      "code": "sh600941",
+      "name": "中国移动",
+      "sector": "通信",
+      "market": "sh-main",
+      "note": "运营商龙头"
+    },
+    {
+      "code": "sh601728",
+      "name": "中国电信",
+      "sector": "通信",
+      "market": "sh-main",
+      "note": ""
+    },
+    {
+      "code": "sh600050",
+      "name": "中国联通",
+      "sector": "通信",
+      "market": "sh-main",
+      "note": ""
+    },
+    {
+      "code": "sz000063",
+      "name": "中兴通讯",
+      "sector": "通信",
+      "market": "sz-main",
+      "note": "通信设备龙头"
+    },
+    {
+      "code": "sh600498",
+      "name": "烽火通信",
+      "sector": "通信",
+      "market": "sh-main",
+      "note": ""
+    },
+    {
+      "code": "sz002027",
+      "name": "分众传媒",
+      "sector": "传媒",
+      "market": "sz-main",
+      "note": "电梯媒体龙头"
+    },
+    {
+      "code": "sz300413",
+      "name": "芒果超媒",
+      "sector": "传媒",
+      "market": "gem",
+      "note": ""
+    },
+    {
+      "code": "sz002594",
+      "name": "比亚迪",
+      "sector": "电力设备",
+      "market": "sz-main",
+      "note": "新能源车+电池"
+    },
+    {
+      "code": "sh601012",
+      "name": "隆基绿能",
+      "sector": "电力设备",
+      "market": "sh-main",
+      "note": "光伏龙头"
+    },
+    {
+      "code": "sz300274",
+      "name": "阳光电源",
+      "sector": "电力设备",
+      "market": "gem",
+      "note": "光伏逆变器"
+    },
+    {
+      "code": "sh600438",
+      "name": "通威股份",
+      "sector": "电力设备",
+      "market": "sh-main",
+      "note": "硅料龙头"
+    },
+    {
+      "code": "sz002129",
+      "name": "TCL中环",
+      "sector": "电力设备",
+      "market": "sz-main",
+      "note": ""
+    },
+    {
+      "code": "sz300014",
+      "name": "亿纬锂能",
+      "sector": "电力设备",
+      "market": "gem",
+      "note": ""
+    },
+    {
+      "code": "sh688599",
+      "name": "晶科能源",
+      "sector": "电力设备",
+      "market": "star",
+      "note": ""
+    },
+    {
+      "code": "sh601633",
+      "name": "长城汽车",
+      "sector": "汽车",
+      "market": "sh-main",
+      "note": ""
+    },
+    {
+      "code": "sh601238",
+      "name": "广汽集团",
+      "sector": "汽车",
+      "market": "sh-main",
+      "note": ""
+    },
+    {
+      "code": "sh600104",
+      "name": "上汽集团",
+      "sector": "汽车",
+      "market": "sh-main",
+      "note": ""
+    },
+    {
+      "code": "sz000625",
+      "name": "长安汽车",
+      "sector": "汽车",
+      "market": "sz-main",
+      "note": ""
+    },
+    {
+      "code": "sh601127",
+      "name": "赛力斯",
+      "sector": "汽车",
+      "market": "sh-main",
+      "note": "问界品牌"
+    },
+    {
+      "code": "sh600893",
+      "name": "航发动力",
+      "sector": "国防军工",
+      "market": "sh-main",
+      "note": "航空发动机"
+    },
+    {
+      "code": "sh600760",
+      "name": "中航沈飞",
+      "sector": "国防军工",
+      "market": "sh-main",
+      "note": "战斗机"
+    },
+    {
+      "code": "sh601698",
+      "name": "中国卫通",
+      "sector": "国防军工",
+      "market": "sh-main",
+      "note": ""
+    },
+    {
+      "code": "sz002179",
+      "name": "中航光电",
+      "sector": "国防军工",
+      "market": "sz-main",
+      "note": ""
+    },
+    {
+      "code": "sh601899",
+      "name": "紫金矿业",
+      "sector": "有色金属",
+      "market": "sh-main",
+      "note": "矿业巨头"
+    },
+    {
+      "code": "sh603993",
+      "name": "洛阳钼业",
+      "sector": "有色金属",
+      "market": "sh-main",
+      "note": ""
+    },
+    {
+      "code": "sh600111",
+      "name": "北方稀土",
+      "sector": "有色金属",
+      "market": "sh-main",
+      "note": "稀土龙头"
+    },
+    {
+      "code": "sz002466",
+      "name": "天齐锂业",
+      "sector": "有色金属",
+      "market": "sz-main",
+      "note": "锂矿"
+    },
+    {
+      "code": "sz002460",
+      "name": "赣锋锂业",
+      "sector": "有色金属",
+      "market": "sz-main",
+      "note": ""
+    },
+    {
+      "code": "sh600547",
+      "name": "山东黄金",
+      "sector": "有色金属",
+      "market": "sh-main",
+      "note": ""
+    },
+    {
+      "code": "sh600309",
+      "name": "万华化学",
+      "sector": "基础化工",
+      "market": "sh-main",
+      "note": "化工龙头"
+    },
+    {
+      "code": "sh600426",
+      "name": "华鲁恒升",
+      "sector": "基础化工",
+      "market": "sh-main",
+      "note": ""
+    },
+    {
+      "code": "sz002493",
+      "name": "荣盛石化",
+      "sector": "基础化工",
+      "market": "sz-main",
+      "note": ""
+    },
+    {
+      "code": "sh600019",
+      "name": "宝钢股份",
+      "sector": "钢铁",
+      "market": "sh-main",
+      "note": "钢铁龙头"
+    },
+    {
+      "code": "sh600010",
+      "name": "包钢股份",
+      "sector": "钢铁",
+      "market": "sh-main",
+      "note": ""
+    },
+    {
+      "code": "sh601088",
+      "name": "中国神华",
+      "sector": "煤炭",
+      "market": "sh-main",
+      "note": "煤炭龙头"
+    },
+    {
+      "code": "sh601225",
+      "name": "陕西煤业",
+      "sector": "煤炭",
+      "market": "sh-main",
+      "note": ""
+    },
+    {
+      "code": "sh601857",
+      "name": "中国石油",
+      "sector": "石油石化",
+      "market": "sh-main",
+      "note": "能源巨头"
+    },
+    {
+      "code": "sh600028",
+      "name": "中国石化",
+      "sector": "石油石化",
+      "market": "sh-main",
+      "note": ""
+    },
+    {
+      "code": "sh600938",
+      "name": "中国海油",
+      "sector": "石油石化",
+      "market": "sh-main",
+      "note": ""
+    },
+    {
+      "code": "sh601919",
+      "name": "中远海控",
+      "sector": "交通运输",
+      "market": "sh-main",
+      "note": "集运龙头"
+    },
+    {
+      "code": "sh601816",
+      "name": "京沪高铁",
+      "sector": "交通运输",
+      "market": "sh-main",
+      "note": ""
+    },
+    {
+      "code": "sh601021",
+      "name": "春秋航空",
+      "sector": "交通运输",
+      "market": "sh-main",
+      "note": ""
+    },
+    {
+      "code": "sz000002",
+      "name": "万科A",
+      "sector": "房地产",
+      "market": "sz-main",
+      "note": "房企龙头"
+    },
+    {
+      "code": "sh600048",
+      "name": "保利发展",
+      "sector": "房地产",
+      "market": "sh-main",
+      "note": ""
+    },
+    {
+      "code": "sh600585",
+      "name": "海螺水泥",
+      "sector": "建筑材料",
+      "market": "sh-main",
+      "note": "水泥龙头"
+    },
+    {
+      "code": "sz002271",
+      "name": "东方雨虹",
+      "sector": "建筑材料",
+      "market": "sz-main",
+      "note": "防水龙头"
+    },
+    {
+      "code": "sh601668",
+      "name": "中国建筑",
+      "sector": "建筑装饰",
+      "market": "sh-main",
+      "note": "建筑龙头"
+    },
+    {
+      "code": "sh601390",
+      "name": "中国中铁",
+      "sector": "建筑装饰",
+      "market": "sh-main",
+      "note": ""
+    },
+    {
+      "code": "sh601186",
+      "name": "中国铁建",
+      "sector": "建筑装饰",
+      "market": "sh-main",
+      "note": ""
+    },
+    {
+      "code": "sh601933",
+      "name": "永辉超市",
+      "sector": "商贸零售",
+      "market": "sh-main",
+      "note": ""
+    },
+    {
+      "code": "sh600361",
+      "name": "华联综超",
+      "sector": "商贸零售",
+      "market": "sh-main",
+      "note": ""
+    },
+    {
+      "code": "sh601888",
+      "name": "中国中免",
+      "sector": "社会服务",
+      "market": "sh-main",
+      "note": "免税龙头"
+    },
+    {
+      "code": "sh601799",
+      "name": "星宇股份",
+      "sector": "纺织服饰",
+      "market": "sh-main",
+      "note": ""
+    },
+    {
+      "code": "sz003000",
+      "name": "南极电商",
+      "sector": "纺织服饰",
+      "market": "sz-main",
+      "note": ""
+    },
+    {
+      "code": "sz000333",
+      "name": "美的集团",
+      "sector": "家用电器",
+      "market": "sz-main",
+      "note": "家电龙头"
+    },
+    {
+      "code": "sz000651",
+      "name": "格力电器",
+      "sector": "家用电器",
+      "market": "sz-main",
+      "note": "空调龙头"
+    },
+    {
+      "code": "sh600690",
+      "name": "海尔智家",
+      "sector": "家用电器",
+      "market": "sh-main",
+      "note": ""
+    },
+    {
+      "code": "sz002508",
+      "name": "老板电器",
+      "sector": "家用电器",
+      "market": "sz-main",
+      "note": ""
+    },
+    {
+      "code": "sh603899",
+      "name": "晨光股份",
+      "sector": "轻工制造",
+      "market": "sh-main",
+      "note": "文具龙头"
+    },
+    {
+      "code": "sh601882",
+      "name": "海天精工",
+      "sector": "机械设备",
+      "market": "sh-main",
+      "note": "数控机床"
+    },
+    {
+      "code": "sh600031",
+      "name": "三一重工",
+      "sector": "机械设备",
+      "market": "sh-main",
+      "note": "工程机械龙头"
+    },
+    {
+      "code": "sz002008",
+      "name": "大族激光",
+      "sector": "机械设备",
+      "market": "sz-main",
+      "note": ""
+    },
+    {
+      "code": "sh603698",
+      "name": "航天工程",
+      "sector": "机械设备",
+      "market": "sh-main",
+      "note": ""
+    },
+    {
+      "code": "sh600900",
+      "name": "长江电力",
+      "sector": "公用事业",
+      "market": "sh-main",
+      "note": "水电龙头"
+    },
+    {
+      "code": "sh600023",
+      "name": "浙能电力",
+      "sector": "公用事业",
+      "market": "sh-main",
+      "note": ""
+    },
+    {
+      "code": "sh600795",
+      "name": "国电电力",
+      "sector": "公用事业",
+      "market": "sh-main",
+      "note": ""
+    },
+    {
+      "code": "sh603177",
+      "name": "德创环保",
+      "sector": "环保",
+      "market": "sh-main",
+      "note": ""
+    },
+    {
+      "code": "sh605588",
+      "name": "冠石科技",
+      "sector": "环保",
+      "market": "sh-main",
+      "note": ""
+    },
+    {
+      "code": "sh603605",
+      "name": "珀莱雅",
+      "sector": "美容护理",
+      "market": "sh-main",
+      "note": "化妆品龙头"
+    },
+    {
+      "code": "sz300957",
+      "name": "贝泰妮",
+      "sector": "美容护理",
+      "market": "gem",
+      "note": "功能性护肤"
+    },
+    {
+      "code": "sh600136",
+      "name": "当代文体",
+      "sector": "综合",
+      "market": "sh-main",
+      "note": ""
+    },
+    {
+      "code": "sh600598",
+      "name": "北大荒",
+      "sector": "农林牧渔",
+      "market": "sh-main",
+      "note": "农业龙头"
+    },
+    {
+      "code": "sz000876",
+      "name": "新希望",
+      "sector": "农林牧渔",
+      "market": "sz-main",
+      "note": "饲料+养猪"
+    },
+    {
+      "code": "sh600975",
+      "name": "新五丰",
+      "sector": "农林牧渔",
+      "market": "sh-main",
+      "note": ""
+    },
+    {
+      "code": "sz300124",
+      "name": "汇川技术",
+      "sector": "机械设备",
+      "market": "gem",
+      "note": "工控龙头"
+    },
+    {
+      "code": "sh688139",
+      "name": "卓胜微",
+      "sector": "电子",
+      "market": "star",
+      "note": ""
+    },
+    {
+      "code": "sz300661",
+      "name": "圣邦股份",
+      "sector": "电子",
+      "market": "gem",
+      "note": ""
+    },
+    {
+      "code": "sh688008",
+      "name": "澜起科技",
+      "sector": "电子",
+      "market": "star",
+      "note": "内存接口芯片"
+    },
+    {
+      "code": "sh600150",
+      "name": "中国船舶",
+      "sector": "国防军工",
+      "market": "sh-main",
+      "note": "造船龙头"
+    },
+    {
+      "code": "sz002041",
+      "name": "登海种业",
+      "sector": "农林牧渔",
+      "market": "sz-main",
+      "note": ""
+    },
+    {
+      "code": "sh600009",
+      "name": "上海机场",
+      "sector": "交通运输",
+      "market": "sh-main",
+      "note": "机场龙头"
+    },
+    {
+      "code": "sh688331",
+      "name": "荣昌生物",
+      "sector": "医药生物",
+      "market": "star",
+      "note": ""
+    },
+    {
+      "code": "sz300122",
+      "name": "智飞生物",
+      "sector": "医药生物",
+      "market": "gem",
+      "note": "疫苗"
+    },
+    {
+      "code": "sh688180",
+      "name": "君实生物",
+      "sector": "医药生物",
+      "market": "star",
+      "note": ""
+    },
+    {
+      "code": "sh002709",
+      "name": "天赐材料",
+      "sector": "电力设备",
+      "market": "sh-main",
+      "note": "电解液"
+    },
+    {
+      "code": "sz300037",
+      "name": "新宙邦",
+      "sector": "电力设备",
+      "market": "gem",
+      "note": ""
+    },
+    {
+      "code": "sh688111",
+      "name": "金山办公",
+      "sector": "计算机",
+      "market": "star",
+      "note": "办公软件龙头"
+    },
+    {
+      "code": "sh601689",
+      "name": "拓普集团",
+      "sector": "汽车",
+      "market": "sh-main",
+      "note": "汽车零部件"
+    },
+    {
+      "code": "sh601212",
+      "name": "白银有色",
+      "sector": "有色金属",
+      "market": "sh-main",
+      "note": ""
+    }
+  ],
+  "watchlist": [
+    {
+      "code": "sz002173",
+      "stopLoss": 20.66,
+      "support": 20.67,
+      "resistance": 24,
+      "note": "医疗服务，关注止损位"
+    },
+    {
+      "code": "sz002475",
+      "stopLoss": 52.65,
+      "support": 52.65,
+      "resistance": 72.46,
+      "note": "消费电子龙头，突破压力位"
+    },
+    {
+      "code": "sh600062",
+      "stopLoss": 15.46,
+      "support": 15.55,
+      "resistance": 17.38,
+      "note": "化学制药，支撑位附近"
+    },
+    {
+      "code": "sh600839",
+      "stopLoss": 6.37,
+      "support": 6.4,
+      "resistance": 8.5,
+      "note": "黑色家电，震荡上行"
+    },
+    {
+      "code": "sh601211",
+      "stopLoss": 16.8,
+      "support": 16.9,
+      "resistance": 20.5,
+      "note": "券商合并，关注量能"
+    },
+    {
+      "code": "sh601882",
+      "stopLoss": 18.97,
+      "support": 19,
+      "resistance": 23,
+      "note": "数控机床，趋势向好"
+    },
+    {
+      "code": "sh603501",
+      "stopLoss": 84.63,
+      "support": 84.7,
+      "resistance": 113.77,
+      "note": "半导体CIS，突破在即"
+    }
+  ],
+  "alerts": [
+    {
+      "code": "sz002173",
+      "type": "stop-loss",
+      "target": 20.66,
+      "note": "接近止损位"
+    },
+    {
+      "code": "sz002475",
+      "type": "resistance",
+      "target": 72.46,
+      "note": "接近压力位"
+    },
+    {
+      "code": "sh601882",
+      "type": "resistance",
+      "target": 23,
+      "note": "关注突破"
+    },
+    {
+      "code": "sh603501",
+      "type": "support",
+      "target": 84.7,
+      "note": "支撑位上方运行"
+    },
+    {
+      "code": "sh600062",
+      "type": "support",
+      "target": 15.55,
+      "note": "测试支撑"
+    },
+    {
+      "code": "sh601211",
+      "type": "stop-loss",
+      "target": 16.8,
+      "note": "止损位上方"
+    },
+    {
+      "code": "sh600839",
+      "type": "support",
+      "target": 6.4,
+      "note": "支撑位上方"
+    }
+  ]
+}
