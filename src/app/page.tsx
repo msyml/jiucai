@@ -39,6 +39,39 @@ function changeClass(pct: number): string {
   return pct > 0 ? 'up' : pct < 0 ? 'down' : 'flat';
 }
 
+// 腾讯行情接口解析（浏览器直连，GBK 解码）
+function parseTencentQuote(line: string): StockQuote | null {
+  const match = line.match(/v_(\w+)="([\s\S]+?)"/);
+  if (!match) return null;
+  const code = match[1];
+  const fields = match[2].split('~');
+  if (fields.length < 38) return null;
+  const num = (i: number) => {
+    const v = parseFloat(fields[i]);
+    return isNaN(v) ? 0 : v;
+  };
+  return {
+    code,
+    name: fields[1] || '',
+    price: num(3),
+    prevClose: num(4),
+    open: num(5),
+    volume: num(6),
+    amount: num(36) * 10000,
+    change: num(30),
+    changePercent: num(31),
+    high: num(32),
+    low: num(33),
+    turnoverRate: num(37),
+    peRatio: num(38),
+    amplitude: num(42),
+    circulationMarketCap: num(44) * 100000000,
+    totalMarketCap: num(43) * 100000000,
+    pbRatio: num(45),
+    timestamp: fields[29] || '',
+  };
+}
+
 // ========== 主组件 ==========
 export default function HomePage() {
   // 行情数据
@@ -70,6 +103,10 @@ export default function HomePage() {
   const [stockMap, setStockMap] = useState<Map<string, StockInfo>>(new Map());
   const [dataReady, setDataReady] = useState(false);
 
+  // 运行模式：GitHub Pages 静态只读版隐藏编辑；本地 dev 保留完整编辑能力
+  const READONLY = process.env.NEXT_PUBLIC_READONLY === 'true';
+  const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
   // 管理模式（管理员口令）
   const [isAdmin, setIsAdmin] = useState(false);
   const [adminToken, setAdminToken] = useState('');
@@ -95,17 +132,22 @@ export default function HomePage() {
     setTimeout(() => setToasts(prev => prev.filter(t => t.id !== id)), 4000);
   }, []);
 
-  // ========== 行情获取 ==========
+  // ========== 行情获取（浏览器直连腾讯公开接口） ==========
   const fetchQuotes = useCallback(async () => {
+    if (stocks.length === 0) return;
     try {
-      const resp = await fetch(`/api/quote?all=1`);
+      const codes = stocks.map(s => s.code);
+      const url = `https://qt.gtimg.cn/q=${codes.join(',')}`;
+      const resp = await fetch(url, { headers: { Referer: 'https://gu.qq.com/' } });
       if (!resp.ok) throw new Error('fetch failed');
-      const json = await resp.json();
-      if (json.ok && json.data) {
-        const map = new Map<string, StockQuote>();
-        for (const [code, quote] of Object.entries(json.data)) {
-          map.set(code, quote as StockQuote);
-        }
+      const buf = await resp.arrayBuffer();
+      const text = new TextDecoder('gbk').decode(buf);
+      const map = new Map<string, StockQuote>();
+      for (const line of text.split(';')) {
+        const q = parseTencentQuote(line);
+        if (q) map.set(q.code, q);
+      }
+      if (map.size > 0) {
         setQuotes(map);
         setQuoteTime(new Date().toLocaleTimeString('zh-CN', { hour12: false }));
         setIsOnline(true);
@@ -114,36 +156,57 @@ export default function HomePage() {
       console.error('fetchQuotes error:', err);
       setIsOnline(false);
     }
-  }, []);
+  }, [stocks]);
 
-  // ========== 可编辑数据获取 ==========
+  // ========== 可编辑数据获取（双模式） ==========
   const fetchData = useCallback(async () => {
     try {
-      const resp = await fetch('/api/data');
-      if (!resp.ok) throw new Error('fetch data failed');
-      const json = await resp.json();
-      if (json.ok) {
+      if (READONLY) {
+        // 静态只读版：直接读取构建时打包的静态 JSON（GitHub Pages）
+        const resp = await fetch(`${BASE_PATH}/stocks.json`);
+        if (!resp.ok) throw new Error('fetch data failed');
+        const json = await resp.json();
         setStocks(json.stocks || []);
         setSectors(json.sectors || []);
         setWatchlist(json.watchlist || []);
         setAlerts(json.alerts || []);
-        setSectorCounts(json.sectorCounts || {});
+        const counts: Record<string, number> = {};
+        for (const s of (json.stocks || [])) counts[s.sector] = (counts[s.sector] || 0) + 1;
+        setSectorCounts(counts);
         setStockMap(new Map((json.stocks || []).map((s: StockInfo) => [s.code, s])));
+      } else {
+        // 本地 dev：从 API 读取（可读写 data/stocks.json）
+        const resp = await fetch('/api/data');
+        if (!resp.ok) throw new Error('fetch data failed');
+        const json = await resp.json();
+        if (json.ok) {
+          setStocks(json.stocks || []);
+          setSectors(json.sectors || []);
+          setWatchlist(json.watchlist || []);
+          setAlerts(json.alerts || []);
+          setSectorCounts(json.sectorCounts || {});
+          setStockMap(new Map((json.stocks || []).map((s: StockInfo) => [s.code, s])));
+        }
       }
     } catch (err) {
       console.error('fetchData error:', err);
     } finally {
       setDataReady(true);
     }
-  }, []);
+  }, [READONLY, BASE_PATH]);
 
-  // 初始加载 + 定时刷新
+  // 初始加载数据
   useEffect(() => {
     fetchData();
+  }, [fetchData]);
+
+  // 数据就绪后拉取行情 + 每 30 秒刷新
+  useEffect(() => {
+    if (stocks.length === 0) return;
     fetchQuotes();
     const timer = setInterval(fetchQuotes, 30000);
     return () => clearInterval(timer);
-  }, [fetchData, fetchQuotes]);
+  }, [fetchQuotes, stocks.length]);
 
   // ========== 别名：让既有渲染逻辑无需大改 ==========
   const STOCKS = stocks;
@@ -547,7 +610,7 @@ export default function HomePage() {
             </button>
           </div>
           <div className="topbar-status">
-            {isAdmin ? (
+            {!READONLY && (isAdmin ? (
               <button className="admin-badge active" onClick={doLogout} title="点击退出管理模式">
                 <Icon.Lock /> 管理模式
               </button>
@@ -555,7 +618,7 @@ export default function HomePage() {
               <button className="admin-badge" onClick={() => setLoginOpen(true)} title="管理员登录">
                 <Icon.Lock /> 管理登录
               </button>
-            )}
+            ))}
             <div className="public-badge"><i /> 粉丝公开版</div>
             <div className="online-badge"><i /> 在线 {onlineCount} 人</div>
           </div>
@@ -604,7 +667,7 @@ export default function HomePage() {
                   <option value="updated">最近更新</option>
                 </select>
               </label>
-              {isAdmin && (
+              {isAdmin && !READONLY && (
               <button className="add-stock-button" onClick={openAdd}>
                 <Icon.Plus /> 新增股票
               </button>
@@ -683,7 +746,7 @@ export default function HomePage() {
                 if (!stock) return null;
                 return (
                   <div key={item.code} className="watch-card" onClick={() => openDetail(item.code)}>
-                    {isAdmin && <button className="mini-remove" title="移除观察" onClick={(e) => { e.stopPropagation(); removeWatch(item.code); }}>×</button>}
+                    {isAdmin && !READONLY && <button className="mini-remove" title="移除观察" onClick={(e) => { e.stopPropagation(); removeWatch(item.code); }}>×</button>}
                     <div className="watch-card-header">
                       <div>
                         <div className="watch-card-name">{stock.name} <span className="star">★</span></div>
@@ -733,7 +796,7 @@ export default function HomePage() {
                 const progressPct = quote ? Math.min(100, Math.max(0, (1 - distance) * 100 * 3)) : 0;
                 return (
                   <div key={idx} className={`alert-card ${triggered ? 'triggered' : ''}`} onClick={() => openDetail(alert.code)}>
-                    {isAdmin && <button className="mini-remove" title="移除预警" onClick={(e) => { e.stopPropagation(); removeAlert(alert.code); }}>×</button>}
+                    {isAdmin && !READONLY && <button className="mini-remove" title="移除预警" onClick={(e) => { e.stopPropagation(); removeAlert(alert.code); }}>×</button>}
                     <div className="alert-icon"><Icon.Bell /></div>
                     <div className="alert-info">
                       <div className="alert-name">{stock.name}</div>
@@ -803,7 +866,7 @@ export default function HomePage() {
                 const isWatched = WATCHLIST.some(w => w.code === stock.code);
                 return (
                   <div key={stock.code} className="stock-card" onClick={() => openDetail(stock.code)}>
-                    {isAdmin && (
+                    {isAdmin && !READONLY && (
                     <div className="stock-card-actions">
                       <button title="编辑" onClick={(e) => { e.stopPropagation(); openEdit(stock.code); }}>
                         <Icon.Edit />
@@ -874,7 +937,7 @@ export default function HomePage() {
               <div className="code">{detailStock.code}</div>
               <span className="sector-tag">{detailStock.sector}</span>
             </div>
-            {isAdmin && (
+            {isAdmin && !READONLY && (
             <div className="detail-actions">
               <button className="detail-action" onClick={() => openEdit(detailStock.code)}>
                 <Icon.Edit /> 编辑资料

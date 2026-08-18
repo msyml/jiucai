@@ -7,6 +7,10 @@
 /.next
 /out
 
+# 静态导出构建产物（由 data/stocks.json 自动生成，勿提交）
+/public/stocks.json
+/public/_next
+
 # environment variables（含管理员口令，切勿提交）
 .env*.local
 .env
